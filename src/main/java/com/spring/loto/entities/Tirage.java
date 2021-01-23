@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -28,9 +29,11 @@ public class Tirage implements Serializable {
 	private String jour;
 	
 	@ManyToOne
+	@JoinColumn
 	private Fichier fichier;
 
 	@ManyToOne
+	@JoinColumn
 	private Combinaison combinaison;
 	
 	

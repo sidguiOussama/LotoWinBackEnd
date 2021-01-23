@@ -1,5 +1,6 @@
 package com.spring.loto.services;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,5 +33,9 @@ public class CombinaisonService {
 	
 	public Optional<Combinaison> findCombinaisonById(Integer id) {
 		return combinaisonRepository.findById(id);
+	}
+	
+	public int countNumberBoule(int number) {
+		return combinaisonRepository.countByBouleOneOrBouleTwoOrBouleThreeOrBouleFourOrBouleFive(number, number, number, number, number);
 	}
 }

@@ -15,79 +15,96 @@ public class Combinaison implements Serializable {
 	@Id @GeneratedValue
 	private Integer id;
 	
-	private int boule1;
-	private int boule2;
-	private int boule3;
-	private int boule4;
-	private int boule5;
+	
+	private int bouleOne;
+	private int bouleTwo;
+	private int bouleThree;
+	private int bouleFour;
+	private int bouleFive;
 	private int numeroChance;
 	
 	public Combinaison() {
 		
 	}
-	public Combinaison(Integer id, int boule1, int boule2, int boule3, int boule4, int boule5, int numeroChance) {
-		super();
-		this.id = id;
-		this.boule1 = boule1;
-		this.boule2 = boule2;
-		this.boule3 = boule3;
-		this.boule4 = boule4;
-		this.boule5 = boule5;
-		this.numeroChance = numeroChance;
-	}
-	
-	public Combinaison(int boule1, int boule2, int boule3, int boule4, int boule5, int numeroChance) {
-		super();
-		this.boule1 = boule1;
-		this.boule2 = boule2;
-		this.boule3 = boule3;
-		this.boule4 = boule4;
-		this.boule5 = boule5;
-		this.numeroChance = numeroChance;
-	}
 
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public int getBoule1() {
-		return boule1;
+
+	public int getBouleOne() {
+		return bouleOne;
 	}
-	public void setBoule1(int boule1) {
-		this.boule1 = boule1;
+
+	public void setBouleOne(int bouleOne) {
+		this.bouleOne = bouleOne;
 	}
-	public int getBoule2() {
-		return boule2;
+
+	public int getBouleTwo() {
+		return bouleTwo;
 	}
-	public void setBoule2(int boule2) {
-		this.boule2 = boule2;
+
+	public void setBouleTwo(int bouleTwo) {
+		this.bouleTwo = bouleTwo;
 	}
-	public int getBoule3() {
-		return boule3;
+
+	public int getBouleThree() {
+		return bouleThree;
 	}
-	public void setBoule3(int boule3) {
-		this.boule3 = boule3;
+
+	public void setBouleThree(int bouleThree) {
+		this.bouleThree = bouleThree;
 	}
-	public int getBoule4() {
-		return boule4;
+
+	public int getBouleFour() {
+		return bouleFour;
 	}
-	public void setBoule4(int boule4) {
-		this.boule4 = boule4;
+
+	public void setBouleFour(int bouleFour) {
+		this.bouleFour = bouleFour;
 	}
-	public int getBoule5() {
-		return boule5;
+
+	public int getBouleFive() {
+		return bouleFive;
 	}
-	public void setBoule5(int boule5) {
-		this.boule5 = boule5;
+
+	public void setBouleFive(int bouleFive) {
+		this.bouleFive = bouleFive;
 	}
+
 	public int getNumeroChance() {
 		return numeroChance;
 	}
+
 	public void setNumeroChance(int numeroChance) {
 		this.numeroChance = numeroChance;
 	}
+
+	public Combinaison(Integer id, int bouleOne, int bouleTwo, int bouleThree, int bouleFour, int bouleFive,
+			int numeroChance) {
+		super();
+		this.id = id;
+		this.bouleOne = bouleOne;
+		this.bouleTwo = bouleTwo;
+		this.bouleThree = bouleThree;
+		this.bouleFour = bouleFour;
+		this.bouleFive = bouleFive;
+		this.numeroChance = numeroChance;
+	}
+
+	public Combinaison(int bouleOne, int bouleTwo, int bouleThree, int bouleFour, int bouleFive, int numeroChance) {
+		super();
+		this.bouleOne = bouleOne;
+		this.bouleTwo = bouleTwo;
+		this.bouleThree = bouleThree;
+		this.bouleFour = bouleFour;
+		this.bouleFive = bouleFive;
+		this.numeroChance = numeroChance;
+	}
+	
 	
 	
 }
