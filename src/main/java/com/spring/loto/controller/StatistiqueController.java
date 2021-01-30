@@ -60,9 +60,8 @@ public class StatistiqueController {
 		return resultNumero;
 	}
 	
-	@GetMapping("/SortieAnnee/{numero}")
-	public  List<Tirage> SortieAnnee(@PathVariable("numero") int numero){
-		System.out.println("haya");
-		return statistiqueService.sortieSurAnnee(1, numero);
+	@GetMapping("/SortieAnnee/{numero}/{annee}")
+	public  List<Tirage> SortieAnnee(@PathVariable("numero") int numero,@PathVariable("annee") int annee){
+		return statistiqueService.sortieSurAnnee(annee, numero);
 	}
 }
