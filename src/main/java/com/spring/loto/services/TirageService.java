@@ -85,6 +85,7 @@ public class TirageService {
 	}
 	
 	public void deleteTirage(Tirage tirage) {
+		//details avant 
 		tirageRepository.delete(tirage);
 	}
 	public void deleteTirageById(Integer id) {

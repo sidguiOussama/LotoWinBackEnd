@@ -3,7 +3,7 @@ package com.spring.loto.entities;
 import java.io.Serializable;
 import java.util.Date;
 
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,6 +23,7 @@ public class Tirage implements Serializable {
 	
 	private int numeroTirage;
 	
+	@Column(name = "date")
 	@Temporal(TemporalType.DATE)
 	private Date date;
 	
