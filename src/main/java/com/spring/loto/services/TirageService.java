@@ -71,6 +71,10 @@ public class TirageService {
 		workbook.close();
 	}
 	
+	public int countNumberBoule(int i,Date d,Date fin) {
+		return tirageRepository.countTirageByCombinaisonBouleOneAndDateBetweenOrCombinaisonBouleTwoAndDateBetweenOrCombinaisonBouleThreeAndDateBetweenOrCombinaisonBouleFourAndDateBetweenOrCombinaisonBouleFiveAndDateBetween(i,d,fin,i,d,fin,i,d,fin,i,d,fin,i,d,fin);
+	}
+	
 	public List<Tirage> getTiragesByBoule(int numero){
 		return tirageRepository.findTirageByCombinaisonBouleOneOrCombinaisonBouleTwoOrCombinaisonBouleThreeOrCombinaisonBouleFourOrCombinaisonBouleFive(numero, numero, numero, numero, numero);
 	}

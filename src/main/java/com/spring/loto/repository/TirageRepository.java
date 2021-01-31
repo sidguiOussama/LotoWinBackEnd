@@ -13,4 +13,5 @@ public interface TirageRepository extends JpaRepository<Tirage,Integer> {
 
 	public Tirage findByNumeroTirage(int numero);
 	public List<Tirage> findTirageByCombinaisonBouleOneOrCombinaisonBouleTwoOrCombinaisonBouleThreeOrCombinaisonBouleFourOrCombinaisonBouleFive(int v1, int v2 ,int v3, int v4 ,int v5);
+	public int countTirageByCombinaisonBouleOneAndDateBetweenOrCombinaisonBouleTwoAndDateBetweenOrCombinaisonBouleThreeAndDateBetweenOrCombinaisonBouleFourAndDateBetweenOrCombinaisonBouleFiveAndDateBetween(int v1,Date d1, Date f1, int v2, Date d2, Date f2 ,int v3,Date d3, Date f3, int v4,Date d4, Date f4 ,int v5,Date d5, Date f5);
 }

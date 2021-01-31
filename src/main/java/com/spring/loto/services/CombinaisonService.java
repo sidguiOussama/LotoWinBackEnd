@@ -35,6 +35,7 @@ public class CombinaisonService {
 		return combinaisonRepository.findById(id);
 	}
 	
+	/*Deprected*/
 	public int countNumberBoule(int number) {
 		return combinaisonRepository.countByBouleOneOrBouleTwoOrBouleThreeOrBouleFourOrBouleFive(number, number, number, number, number);
 	}
