@@ -1,7 +1,9 @@
 package com.spring.loto.entities;
 
 import java.io.Serializable;
+import java.time.Period;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -110,6 +112,10 @@ public class Tirage implements Serializable {
 	public void setCombinaison(Combinaison combinaison) {
 		this.combinaison = combinaison;
 	}
+
+
+
+	
 	
 	
 	

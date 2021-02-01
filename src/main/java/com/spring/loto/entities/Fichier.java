@@ -1,6 +1,7 @@
 package com.spring.loto.entities;
 
 import java.io.Serializable;
+import java.time.Period;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

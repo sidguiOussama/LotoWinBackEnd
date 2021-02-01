@@ -1,5 +1,6 @@
 package com.spring.loto.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.loto.dto.EcartDTO;
 import com.spring.loto.dto.TirageDTO;
 import com.spring.loto.entities.Fichier;
 import com.spring.loto.entities.Tirage;
@@ -67,4 +69,15 @@ public class StatistiqueController {
 	public  List<Tirage> SortieAnnee(@PathVariable("numero") int numero,@PathVariable("annee") int annee){
 		return statistiqueService.sortieSurAnnee(annee, numero);
 	}
+	
+	@GetMapping("/EcartMinMax")
+	public  List<EcartDTO> EcartMinMax(){
+		List<EcartDTO>ecarts = new ArrayList<EcartDTO>();
+		for(int i= 1; i<=49;i++) {
+			ecarts.add(statistiqueService.ecart(i));
+		}
+		return ecarts;
+	}
+	
+
 }

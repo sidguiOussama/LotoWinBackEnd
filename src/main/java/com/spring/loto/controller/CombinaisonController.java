@@ -46,5 +46,12 @@ public class CombinaisonController {
 	public  Optional<Combinaison> getCombinaisonById(@PathVariable("id") int id){
 		return combinaisonService.findCombinaisonById(id);
 	}
+	@GetMapping("/AllCombin")
+	public  void AllCombin(){
+			int arr[] = {1, 2, 3, 4, 5}; 
+	        int r = 3; 
+	        int n = arr.length; 
+	        combinaisonService.printCombination(arr, n, r);
+	}
 	
 }
