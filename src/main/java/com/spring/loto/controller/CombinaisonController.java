@@ -1,8 +1,14 @@
 package com.spring.loto.controller;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
+import org.paukov.combinatorics3.Generator;
+import org.paukov.combinatorics3.IGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.loto.dto.CombinDTO;
 import com.spring.loto.entities.Combinaison;
 import com.spring.loto.services.CombinaisonService;
 
@@ -46,12 +53,7 @@ public class CombinaisonController {
 	public  Optional<Combinaison> getCombinaisonById(@PathVariable("id") int id){
 		return combinaisonService.findCombinaisonById(id);
 	}
-	@GetMapping("/AllCombin")
-	public  void AllCombin(){
-			int arr[] = {1, 2, 3, 4, 5}; 
-	        int r = 3; 
-	        int n = arr.length; 
-	        combinaisonService.printCombination(arr, n, r);
-	}
+	
+	
 	
 }

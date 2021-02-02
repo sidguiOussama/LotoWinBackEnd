@@ -104,6 +104,13 @@ public class Combinaison implements Serializable {
 		this.bouleFive = bouleFive;
 		this.numeroChance = numeroChance;
 	}
+
+	@Override
+	public String toString() {
+		return "Combinaison [id=" + id + ", bouleOne=" + bouleOne + ", bouleTwo=" + bouleTwo + ", bouleThree="
+				+ bouleThree + ", bouleFour=" + bouleFour + ", bouleFive=" + bouleFive + ", numeroChance="
+				+ numeroChance + "]";
+	}
 	
 	
 	
