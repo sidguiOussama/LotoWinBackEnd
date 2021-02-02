@@ -1,8 +1,14 @@
 package com.spring.loto.controller;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
+import org.paukov.combinatorics3.Generator;
+import org.paukov.combinatorics3.IGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.loto.dto.CombinDTO;
 import com.spring.loto.entities.Combinaison;
 import com.spring.loto.services.CombinaisonService;
 
@@ -46,12 +53,41 @@ public class CombinaisonController {
 	public  Optional<Combinaison> getCombinaisonById(@PathVariable("id") int id){
 		return combinaisonService.findCombinaisonById(id);
 	}
-	@GetMapping("/AllCombin")
-	public  void AllCombin(){
-			int arr[] = {1, 2, 3, 4, 5}; 
-	        int r = 3; 
-	        int n = arr.length; 
-	        combinaisonService.printCombination(arr, n, r);
-	}
+	
+	/*@PostMapping("/AllCombin")
+	public  HashMap<String, Integer> AllCombin(@RequestBody CombinDTO combinDTO){
+		
+		CombinDTO  dto = new CombinDTO(combinDTO.getValeurs(),combinDTO.getGarantie());
+		HashMap<List<Integer>,String> s =combinaisonService.generateCombin(dto.getValeurs(),5);
+		HashMap<List<Integer>,String> g =combinaisonService.generateCombin(dto.getValeurs(),dto.getGarantie());
+		
+		for (Map.Entry<List<Integer>, String> set : g.entrySet()) {
+			
+			for (Map.Entry<List<Integer>, String> set2 : s.entrySet()) {
+				if(set2.getKey().containsAll(set.getKey())) {
+					set.setValue(set2.getValue());
+					break;
+				}
+			}
+		}
+		
+		
+		System.out.println(s);
+		System.out.println(g);
+		
+		HashMap<String,Integer>hashMap = new HashMap<String, Integer>();
+		for (Map.Entry<List<Integer>, String> set : g.entrySet()) {
+			if(hashMap.get(set.getValue())==null) {
+				hashMap.put(set.getValue(), 1);
+			}else {
+				hashMap.put(set.getValue(),hashMap.get(set.getValue())+1);
+			}
+		}
+		
+		System.out.println(hashMap);
+		
+		return hashMap;
+		
+	}*/
 	
 }
