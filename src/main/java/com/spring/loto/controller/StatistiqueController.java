@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.loto.dto.EcartDTO;
 import com.spring.loto.dto.TirageDTO;
-import com.spring.loto.entities.Fichier;
+
 import com.spring.loto.entities.Tirage;
 import com.spring.loto.services.StatistiqueService;
 
